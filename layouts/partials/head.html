@@ -51,6 +51,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ $icon.RelPermalink }}" />
 {{ end }}
 
+{{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+
 {{/* OpenGraph & Twitter Cards */}}
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
