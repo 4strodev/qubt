@@ -4,6 +4,15 @@
   <head>
     {{ partial "head" . }}
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZY05FDB9N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7ZY05FDB9N');
+  </script>
   <body class="flex h-screen flex-col justify-between bg-neutral-100 dark:bg-neutral-800">
     <div>
       <header class="sticky top-0 z-10 bg-neutral-100 dark:bg-neutral-800">
