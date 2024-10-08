@@ -29,7 +29,7 @@ defaults:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,13 +41,13 @@ jobs:
         uses: actions/setup-go@v5
         with:
           # renovate: datasource=github-tags depName=golang/go
-          go-version: '1.22.5'
+          go-version: '1.23.2'
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           # renovate: datasource=github-releases depName=gohugoio/hugo
-          hugo-version: '0.128.2'
+          hugo-version: '0.135.0'
           extended: true
           
       - name: Build
